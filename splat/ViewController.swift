@@ -14,8 +14,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        // Create a GMSCameraPosition that tells the map to display the
-        // coordinate -33.86,151.20 at zoom level 6.
         
         let initialLocation = CLLocationCoordinate2DMake(-33.86, 151.20)
         let initialDirection = CLLocationDirection()
@@ -27,7 +25,7 @@ class ViewController: UIViewController {
         mapView_.myLocationEnabled = true;
         self.view = mapView_;
         
-        // Creates a marker in the center of the map.
+//         Creates a marker in the center of the map.
 //        GMSMarker *marker = [[GMSMarker alloc] init];
 //        marker.position = CLLocationCoordinate2DMake(-33.86, 151.20);
 //        marker.title = @"Sydney";
