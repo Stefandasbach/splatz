@@ -9,14 +9,16 @@
 import UIKit
 
 
+
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let initialLocation = CLLocationCoordinate2DMake(-33.86, 151.20)
+        let initialLocation = CLLocationCoordinate2DMake(37.78, -122.41)
         let initialDirection = CLLocationDirection()
+        let imageOpacity:Double = 0.5
         
         let camera = GMSCameraPosition.cameraWithTarget(initialLocation, zoom: 10)
         
@@ -24,6 +26,20 @@ class ViewController: UIViewController {
         mapView_.camera = camera
         mapView_.myLocationEnabled = true;
         self.view = mapView_;
+        
+        let southwest = CLLocationCoordinate2DMake(37.72, -122.35)
+        let northeast = CLLocationCoordinate2DMake(37.80,-122.52)
+        
+        let overlayBounds = GMSCoordinateBounds(coordinate: southwest, coordinate: northeast)
+        
+        var splatLogo = UIImage(named:"splatLogo.png")
+        
+        splatLogo = addOpacity(splatLogo, 0.5)
+        
+        var overlay = GMSGroundOverlay(bounds: overlayBounds, icon: splatLogo)
+        
+        overlay.bearing = 0
+        overlay.map = mapView_
         
 //         Creates a marker in the center of the map.
 //        GMSMarker *marker = [[GMSMarker alloc] init];

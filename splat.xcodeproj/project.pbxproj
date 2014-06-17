@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02E7AC06194FD70B00E42547 /* splatLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 02E7AC05194FD70B00E42547 /* splatLogo.png */; };
+		02E7AC08194FDA7800E42547 /* imageUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E7AC07194FDA7800E42547 /* imageUtils.swift */; };
 		7B49D3BD19497EE800CBC2B1 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B49D3BC19497EE800CBC2B1 /* GoogleMaps.framework */; };
 		7B49D3BF19497F4900CBC2B1 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7B49D3BE19497F4900CBC2B1 /* GoogleMaps.bundle */; };
 		7B49D3C119497FA900CBC2B1 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B49D3C019497FA900CBC2B1 /* AVFoundation.framework */; };
@@ -38,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02E7AC05194FD70B00E42547 /* splatLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splatLogo.png; sourceTree = "<group>"; };
+		02E7AC07194FDA7800E42547 /* imageUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = imageUtils.swift; sourceTree = "<group>"; };
 		7B49D3BC19497EE800CBC2B1 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
 		7B49D3BE19497F4900CBC2B1 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
 		7B49D3C019497FA900CBC2B1 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -136,7 +140,9 @@
 			children = (
 				7B55A46C1949685F00392EA6 /* AppDelegate.swift */,
 				7B55A46E1949685F00392EA6 /* ViewController.swift */,
+				02E7AC05194FD70B00E42547 /* splatLogo.png */,
 				7B55A4701949685F00392EA6 /* Main.storyboard */,
+				02E7AC07194FDA7800E42547 /* imageUtils.swift */,
 				7B55A4731949685F00392EA6 /* Images.xcassets */,
 				7B55A46A1949685F00392EA6 /* Supporting Files */,
 			);
@@ -249,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B49D3BF19497F4900CBC2B1 /* GoogleMaps.bundle in Resources */,
+				02E7AC06194FD70B00E42547 /* splatLogo.png in Resources */,
 				7B55A4721949685F00392EA6 /* Main.storyboard in Resources */,
 				7B55A4741949685F00392EA6 /* Images.xcassets in Resources */,
 			);
@@ -268,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02E7AC08194FDA7800E42547 /* imageUtils.swift in Sources */,
 				7B55A46F1949685F00392EA6 /* ViewController.swift in Sources */,
 				7B55A46D1949685F00392EA6 /* AppDelegate.swift in Sources */,
 			);
@@ -342,7 +350,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
-				SWIFT_OBJC_BRIDGING_HEADER = /Users/Stefandasbach/Desktop/programmingProjects/iPhoneDev/swift/splat/GoogleMaps.framework/Headers/GoogleMaps.h;
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/aarontainter/Code/splat/GoogleMaps.framework/Headers/GoogleMaps.h;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -379,7 +387,7 @@
 				METAL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
-				SWIFT_OBJC_BRIDGING_HEADER = /Users/Stefandasbach/Desktop/programmingProjects/iPhoneDev/swift/splat/GoogleMaps.framework/Headers/GoogleMaps.h;
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/aarontainter/Code/splat/GoogleMaps.framework/Headers/GoogleMaps.h;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
