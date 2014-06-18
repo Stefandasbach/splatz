@@ -9,8 +9,10 @@
 import UIKit
 
 
+class ViewController: UIViewController, GMSMapViewDelegate {
 
-class ViewController: UIViewController {
+  
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,8 +26,10 @@ class ViewController: UIViewController {
         
         var mapView_ = GMSMapView(frame: CGRectZero)
         mapView_.camera = camera
-        mapView_.myLocationEnabled = true;
-        self.view = mapView_;
+        mapView_.myLocationEnabled = true
+        self.view = mapView_
+        mapView_.delegate = self
+       
         
         let southwest = CLLocationCoordinate2DMake(37.72, -122.35)
         let northeast = CLLocationCoordinate2DMake(37.80,-122.52)
@@ -38,8 +42,14 @@ class ViewController: UIViewController {
         
         var overlay = GMSGroundOverlay(bounds: overlayBounds, icon: splatLogo)
         
+
+        
+        
+        overlay.tappable = true
         overlay.bearing = 0
         overlay.map = mapView_
+        
+        
         
 //         Creates a marker in the center of the map.
 //        GMSMarker *marker = [[GMSMarker alloc] init];
@@ -53,7 +63,9 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    
+    
 
 }
 
