@@ -11,9 +11,9 @@ import UIKit
 
 class ViewController: UIViewController, GMSMapViewDelegate {
 
-  
-    
+    var mapView_: GMSMapView? = nil
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -28,8 +28,10 @@ class ViewController: UIViewController, GMSMapViewDelegate {
         var mapView_ = GMSMapView(frame: CGRectZero)
         mapView_.camera = camera
         mapView_.myLocationEnabled = true
-        self.view = mapView_
         mapView_.delegate = self
+        self.view = mapView_
+      
+        
        
         
         let southwest = CLLocationCoordinate2DMake(37.72, -122.35)

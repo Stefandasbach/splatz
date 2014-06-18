@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-func addOpacity(image: UIImage, opacity: Double)->UIImage {
+func addOpacity(image: UIImage, opacity: CGFloat)->UIImage {
     //change image
     UIGraphicsBeginImageContextWithOptions(image.size, false, 0.0)
     
