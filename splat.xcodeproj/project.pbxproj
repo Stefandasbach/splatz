@@ -350,7 +350,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
-				SWIFT_OBJC_BRIDGING_HEADER = /Users/aarontainter/Code/splat/GoogleMaps.framework/Headers/GoogleMaps.h;
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/Stefandasbach/Desktop/programmingProjects/iPhoneDev/swift/splat/GoogleMaps.framework/Headers/GoogleMaps.h;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -387,7 +387,7 @@
 				METAL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
-				SWIFT_OBJC_BRIDGING_HEADER = /Users/aarontainter/Code/splat/GoogleMaps.framework/Headers/GoogleMaps.h;
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/Stefandasbach/Desktop/programmingProjects/iPhoneDev/swift/splat/GoogleMaps.framework/Headers/GoogleMaps.h;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
