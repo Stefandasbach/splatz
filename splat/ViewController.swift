@@ -16,12 +16,13 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        /* MapView inital values & dependencies */
         let initialLocation = CLLocationCoordinate2DMake(37.78, -122.41)
         let initialDirection = CLLocationDirection()
         let imageOpacity:Double = 0.5
-        
         let camera = GMSCameraPosition.cameraWithTarget(initialLocation, zoom: 10)
         
+        /* Set up MapView */
         var mapView_ = GMSMapView(frame: CGRectZero)
         mapView_.camera = camera
         mapView_.myLocationEnabled = true;
