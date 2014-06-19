@@ -47,7 +47,7 @@ class ViewController: UIViewController, GMSMapViewDelegate {
         self.view.addSubview(nav)
         self.view.addSubview(cameraButton)
         
-        
+        */
         let southwest = CLLocationCoordinate2DMake(37.72, -122.35)
         let northeast = CLLocationCoordinate2DMake(37.80,-122.52)
         
@@ -62,6 +62,7 @@ class ViewController: UIViewController, GMSMapViewDelegate {
         overlay.tappable = true
         overlay.bearing = 0
         overlay.map = mapView_
+        /*
         //var newMapView = GMSMapView()
         //newMapView.delegate = self
         */
@@ -88,7 +89,10 @@ class ViewController: UIViewController, GMSMapViewDelegate {
     
     func mapView(mapView: GMSMapView!, didTapAtCoordinate coordinate: CLLocationCoordinate2D) {
         println("You tapped at \(coordinate.latitude) \(coordinate.longitude)")
-//        println("ASDA")
+    }
+    
+    func mapView(mapView: GMSMapView!, didTapOverlay overlay: GMSOverlay) {
+        println("You tapped at overlay")
     }
     
     override func didReceiveMemoryWarning() {
