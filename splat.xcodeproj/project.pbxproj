@@ -25,8 +25,11 @@
 		7B49D3D519497FFA00CBC2B1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B49D3D419497FFA00CBC2B1 /* SystemConfiguration.framework */; };
 		7B55A46D1949685F00392EA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B55A46C1949685F00392EA6 /* AppDelegate.swift */; };
 		7B55A46F1949685F00392EA6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B55A46E1949685F00392EA6 /* ViewController.swift */; };
+		7B55A4721949685F00392EA6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B55A4701949685F00392EA6 /* Main.storyboard */; };
 		7B55A4741949685F00392EA6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B55A4731949685F00392EA6 /* Images.xcassets */; };
 		7B55A4801949686000392EA6 /* splatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B55A47F1949686000392EA6 /* splatTests.swift */; };
+		BEB9396C19514EA200D8EA17 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB9396A19514EA200D8EA17 /* Node.swift */; };
+		BEB9396D19514EA200D8EA17 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB9396B19514EA200D8EA17 /* Queue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +67,8 @@
 		7B55A4791949686000392EA6 /* splatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = splatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B55A47E1949686000392EA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B55A47F1949686000392EA6 /* splatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = splatTests.swift; sourceTree = "<group>"; };
+		BEB9396A19514EA200D8EA17 /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
+		BEB9396B19514EA200D8EA17 /* Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,10 +143,11 @@
 		7B55A4691949685F00392EA6 /* splat */ = {
 			isa = PBXGroup;
 			children = (
-				02E7AC091951708800E42547 /* Main.storyboard */,
+				BEB9396919514E7C00D8EA17 /* Utilities */,
 				7B55A46C1949685F00392EA6 /* AppDelegate.swift */,
 				7B55A46E1949685F00392EA6 /* ViewController.swift */,
 				02E7AC05194FD70B00E42547 /* splatLogo.png */,
+				7B55A4701949685F00392EA6 /* Main.storyboard */,
 				02E7AC07194FDA7800E42547 /* imageUtils.swift */,
 				7B55A4731949685F00392EA6 /* Images.xcassets */,
 				7B55A46A1949685F00392EA6 /* Supporting Files */,
@@ -172,6 +178,15 @@
 				7B55A47E1949686000392EA6 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BEB9396919514E7C00D8EA17 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				BEB9396A19514EA200D8EA17 /* Node.swift */,
+				BEB9396B19514EA200D8EA17 /* Queue.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,6 +272,7 @@
 			files = (
 				7B49D3BF19497F4900CBC2B1 /* GoogleMaps.bundle in Resources */,
 				02E7AC06194FD70B00E42547 /* splatLogo.png in Resources */,
+				7B55A4721949685F00392EA6 /* Main.storyboard in Resources */,
 				7B55A4741949685F00392EA6 /* Images.xcassets in Resources */,
 				02E7AC0B1951708800E42547 /* Main.storyboard in Resources */,
 			);
@@ -276,9 +292,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEB9396D19514EA200D8EA17 /* Queue.swift in Sources */,
 				02E7AC08194FDA7800E42547 /* imageUtils.swift in Sources */,
 				7B55A46F1949685F00392EA6 /* ViewController.swift in Sources */,
 				7B55A46D1949685F00392EA6 /* AppDelegate.swift in Sources */,
+				BEB9396C19514EA200D8EA17 /* Node.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,10 +319,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		02E7AC091951708800E42547 /* Main.storyboard */ = {
+		7B55A4701949685F00392EA6 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				02E7AC0A1951708800E42547 /* Base */,
+				7B55A4711949685F00392EA6 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -406,6 +424,7 @@
 				INFOPLIST_FILE = splat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/erazfar/Documents/splat/GoogleMaps.framework/Headers/GoogleMaps.h;
 			};
 			name = Debug;
 		};
@@ -422,6 +441,7 @@
 				INFOPLIST_FILE = splat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/erazfar/Documents/splat/GoogleMaps.framework/Headers/GoogleMaps.h;
 			};
 			name = Release;
 		};
