@@ -11,7 +11,11 @@ import UIKit
 
 class ViewController: UIViewController, GMSMapViewDelegate {
 
+    @IBOutlet
+    var imageView:UIImageView
+    
     var mapView_: GMSMapView? = nil
+    //var cameraButton: UIButton? = nil
 
     
     override func viewDidLoad() {
@@ -30,9 +34,20 @@ class ViewController: UIViewController, GMSMapViewDelegate {
         mapView_.myLocationEnabled = true
         mapView_.delegate = self
         self.view = mapView_
-      
         
-       
+        var cameraButton   = UIButton.buttonWithType(UIButtonType.System) as UIButton
+        cameraButton.setTitle("Hello World", forState: UIControlState.Normal)
+        cameraButton.frame = CGRectMake(0, 0, 100, 75)
+        cameraButton.addTarget(self, action: "btnTouched:", forControlEvents:.TouchUpInside)
+        cameraButton.tintColor = UIColor(white: 1, alpha: 1)
+        
+        var nav = UINavigationBar()
+        nav.frame = CGRectMake(0, 0, 320, 64)
+        nav.barTintColor = UIColor(red: 0.40, green: 0.06, blue: 0.86, alpha: 1)
+        
+        self.view.addSubview(nav)
+        self.view.addSubview(cameraButton)
+        
         
         let southwest = CLLocationCoordinate2DMake(37.72, -122.35)
         let northeast = CLLocationCoordinate2DMake(37.80,-122.52)
@@ -45,16 +60,12 @@ class ViewController: UIViewController, GMSMapViewDelegate {
         
         var overlay = GMSGroundOverlay(bounds: overlayBounds, icon: splatLogo)
         
-
-        
-        
         overlay.tappable = true
         overlay.bearing = 0
         overlay.map = mapView_
         
         
-        
-//         Creates a marker in the center of the map.
+//        Creates a marker in the center of the map.
 //        GMSMarker *marker = [[GMSMarker alloc] init];
 //        marker.position = CLLocationCoordinate2DMake(-33.86, 151.20);
 //        marker.title = @"Sydney";
@@ -64,11 +75,15 @@ class ViewController: UIViewController, GMSMapViewDelegate {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+        
         // Dispose of any resources that can be recreated.
     }
     
-    
-    
+    func btnTouched(sender: UIButton!) {
+        println("tapped button")
+    }
+        
+    func 
 
 }
 
