@@ -8,15 +8,13 @@
 
 import UIKit
 
+//@class_protocol protocol GMSMapViewDelegate {
+//    func didTapAtCoordinate(coordinate: CLLocationCoordinate2D)
+//}
 
 class ViewController: UIViewController, GMSMapViewDelegate {
     
-    @IBOutlet
-    var imageView:UIImageView
-    
     var mapView_: GMSMapView? = nil
-    //var cameraButton: UIButton? = nil
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +24,7 @@ class ViewController: UIViewController, GMSMapViewDelegate {
         let initialLocation = CLLocationCoordinate2DMake(37.78, -122.41)
         let initialDirection = CLLocationDirection()
         let imageOpacity:Double = 0.5
-        let camera = GMSCameraPosition.cameraWithTarget(initialLocation, zoom: 10)
+        let camera = GMSCameraPosition.cameraWithTarget(initialLocation, zoom: 8)
         
         /* Set up MapView */
         var mapView_ = GMSMapView(frame: CGRectZero)
@@ -35,6 +33,7 @@ class ViewController: UIViewController, GMSMapViewDelegate {
         mapView_.delegate = self
         self.view = mapView_
         
+        /*
         var cameraButton   = UIButton.buttonWithType(UIButtonType.System) as UIButton
         cameraButton.setTitle("Hello World", forState: UIControlState.Normal)
         cameraButton.frame = CGRectMake(0, 0, 100, 75)
@@ -63,14 +62,33 @@ class ViewController: UIViewController, GMSMapViewDelegate {
         overlay.tappable = true
         overlay.bearing = 0
         overlay.map = mapView_
-        
-        
-        //        Creates a marker in the center of the map.
-        //        GMSMarker *marker = [[GMSMarker alloc] init];
-        //        marker.position = CLLocationCoordinate2DMake(-33.86, 151.20);
-        //        marker.title = @"Sydney";
-        //        marker.snippet = @"Australia";
-        //        marker.map = mapView_;
+        //var newMapView = GMSMapView()
+        //newMapView.delegate = self
+        */
+    }
+    
+    
+//    - (void)loginViewFetchedUserInfo:(FBLoginView *)loginView user: (id<FBGraphUser>)user;
+//
+//
+//    func loginViewFetchedUserInto(loginView : FBLoginView!, user: FBGraphUser) {
+//        //Passs
+//    }
+    
+    
+//    
+//    - (void)mapView:(GMSMapView *)mapView
+//    didTapAtCoordinate:(CLLocationCoordinate2D)coordinate {
+//        NSLog(@"You tapped at %f,%f", coordinate.latitude, coordinate.longitude);
+//    }
+//    
+//    (void)loginViewFetchedUserInfo:(FBLoginView *)loginView user: (id<FBGraphUser>)user;
+//    
+//    func loginViewFetchedUserInto(loginView : FBLoginView!, user: FBGraphUser)
+    
+    func mapView(mapView: GMSMapView!, didTapAtCoordinate coordinate: CLLocationCoordinate2D) {
+        println("You tapped at \(coordinate.latitude) \(coordinate.longitude)")
+//        println("ASDA")
     }
     
     override func didReceiveMemoryWarning() {
@@ -82,7 +100,5 @@ class ViewController: UIViewController, GMSMapViewDelegate {
     func btnTouched(sender: UIButton!) {
         println("tapped button")
     }
-    
-    func 
     
 }
