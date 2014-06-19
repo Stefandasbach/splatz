@@ -11,8 +11,11 @@ import UIKit
 
 class ViewController: UIViewController, GMSMapViewDelegate {
 
-    var mapView_: GMSMapView? = nil
-
+//    var mapView_: GMSMapView? = nil
+    
+    override func loadView() {
+        //Fuck Darkhan
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,12 +31,11 @@ class ViewController: UIViewController, GMSMapViewDelegate {
         var mapView_ = GMSMapView(frame: CGRectZero)
         mapView_.camera = camera
         mapView_.myLocationEnabled = true
-        mapView_.delegate = self
-        self.view = mapView_
-      
+//        mapView_.delegate = self
+        var delegate: GMSMapViewDelegate?
+        delegate?.didTapMyLocationButtonForMapView!(mapView_)
         
        
-        
         let southwest = CLLocationCoordinate2DMake(37.72, -122.35)
         let northeast = CLLocationCoordinate2DMake(37.80,-122.52)
         
@@ -44,10 +46,6 @@ class ViewController: UIViewController, GMSMapViewDelegate {
         splatLogo = addOpacity(splatLogo, 0.5)
         
         var overlay = GMSGroundOverlay(bounds: overlayBounds, icon: splatLogo)
-        
-
-        
-        
         overlay.tappable = true
         overlay.bearing = 0
         overlay.map = mapView_
@@ -67,6 +65,10 @@ class ViewController: UIViewController, GMSMapViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    func didTa
+//    func didTapAtCoordinate:(CLLocationCoordinate2D)coordinate {
+//    NSLog(@"You tapped at %f,%f", coordinate.latitude, coordinate.longitude);
+//    }
     
     
 
