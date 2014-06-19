@@ -14,7 +14,7 @@ func addOpacity(image: UIImage, opacity: CGFloat)->UIImage {
     UIGraphicsBeginImageContextWithOptions(image.size, false, 0.0)
     
     let ctx = UIGraphicsGetCurrentContext()
-    var area = CGRectMake(0, 0, image.size.width, image.size.height)
+    let area = CGRectMake(0, 0, image.size.width, image.size.height)
     
     CGContextScaleCTM(ctx, 1, -1)
     CGContextTranslateCTM(ctx, 0, -area.size.height)
