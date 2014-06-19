@@ -10,21 +10,13 @@ import UIKit
 
 
 class ViewController: UIViewController, GMSMapViewDelegate {
-
-<<<<<<< HEAD
-//    var mapView_: GMSMapView? = nil
     
-    override func loadView() {
-        //Fuck Darkhan
-    }
-=======
     @IBOutlet
     var imageView:UIImageView
     
     var mapView_: GMSMapView? = nil
     //var cameraButton: UIButton? = nil
-
->>>>>>> b4acd29042cb6656a3bcf3010595b8175f0fe067
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,13 +32,6 @@ class ViewController: UIViewController, GMSMapViewDelegate {
         var mapView_ = GMSMapView(frame: CGRectZero)
         mapView_.camera = camera
         mapView_.myLocationEnabled = true
-<<<<<<< HEAD
-//        mapView_.delegate = self
-        var delegate: GMSMapViewDelegate?
-        delegate?.didTapMyLocationButtonForMapView!(mapView_)
-        
-       
-=======
         mapView_.delegate = self
         self.view = mapView_
         
@@ -64,7 +49,6 @@ class ViewController: UIViewController, GMSMapViewDelegate {
         self.view.addSubview(cameraButton)
         
         
->>>>>>> b4acd29042cb6656a3bcf3010595b8175f0fe067
         let southwest = CLLocationCoordinate2DMake(37.72, -122.35)
         let northeast = CLLocationCoordinate2DMake(37.80,-122.52)
         
@@ -75,43 +59,30 @@ class ViewController: UIViewController, GMSMapViewDelegate {
         splatLogo = addOpacity(splatLogo, 0.5)
         
         var overlay = GMSGroundOverlay(bounds: overlayBounds, icon: splatLogo)
-<<<<<<< HEAD
-=======
         
->>>>>>> b4acd29042cb6656a3bcf3010595b8175f0fe067
         overlay.tappable = true
         overlay.bearing = 0
         overlay.map = mapView_
         
         
-//        Creates a marker in the center of the map.
-//        GMSMarker *marker = [[GMSMarker alloc] init];
-//        marker.position = CLLocationCoordinate2DMake(-33.86, 151.20);
-//        marker.title = @"Sydney";
-//        marker.snippet = @"Australia";
-//        marker.map = mapView_;
+        //        Creates a marker in the center of the map.
+        //        GMSMarker *marker = [[GMSMarker alloc] init];
+        //        marker.position = CLLocationCoordinate2DMake(-33.86, 151.20);
+        //        marker.title = @"Sydney";
+        //        marker.snippet = @"Australia";
+        //        marker.map = mapView_;
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
         // Dispose of any resources that can be recreated.
     }
     
-<<<<<<< HEAD
-    func didTa
-//    func didTapAtCoordinate:(CLLocationCoordinate2D)coordinate {
-//    NSLog(@"You tapped at %f,%f", coordinate.latitude, coordinate.longitude);
-//    }
-    
-    
-=======
     func btnTouched(sender: UIButton!) {
         println("tapped button")
     }
-        
+    
     func 
->>>>>>> b4acd29042cb6656a3bcf3010595b8175f0fe067
-
+    
 }
-
